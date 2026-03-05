@@ -1,0 +1,27 @@
+<!-- ticket-template.html (Optional: Can be used as a reference or embedded print iframe if needed; dynamically generated in index.html for simplicity) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printed Ticket</title>
+    <style>
+        body { font-family: 'Courier New', monospace; font-size: 12pt; width: 80mm; margin: 0 auto; padding: 10px; }
+        .header, .footer { font-weight: bold; text-align: center; text-transform: uppercase; }
+        div { margin-bottom: 2px; white-space: pre; }
+    </style>
+</head>
+<body>
+    <div class="header">      INDIAN RAILWAYS</div>
+    <div>FROM : [FROM]</div>
+    <div>TO   : [TO]</div>
+    <div>TYPE : [TYPE]</div>
+    <div>PASS : [PASS]</div>
+    <div>FARE : ₹[FARE]</div>
+    <div>DATE : [DATE]</div>
+    <div>TIME : [TIME]</div>
+    <div>T.N. : [TICKET]</div>
+    <div class="footer">    HAVE A SAFE JOURNEY</div>
+    <!-- QR Code Canvas would be inserted here -->
+</body>
+</html>
