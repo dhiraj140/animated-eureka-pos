@@ -1,0 +1,79 @@
+/* style.css */
+.ticket {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.3;
+    max-width: 80mm;
+    margin: 0 auto;
+    white-space: pre-line;
+    text-align: center;
+}
+
+.ticket div {
+    margin-bottom: 2px;
+}
+
+.ticket .header,
+.ticket .footer {
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    #app > *:not(#preview) {
+        display: none !important;
+    }
+
+    #preview {
+        display: block !important;
+        box-shadow: none;
+        border: none;
+        max-width: none;
+    }
+
+    #ticket {
+        visibility: visible;
+        position: relative;
+        width: 80mm;
+        height: auto;
+        margin: 0;
+        padding: 10px;
+        font-size: 12pt;
+        page-break-inside: avoid;
+    }
+
+    #qrcode {
+        visibility: visible;
+        position: relative;
+        display: block;
+        margin: 5mm auto;
+        width: 40mm !important;
+        height: 40mm !important;
+        page-break-inside: avoid;
+    }
+
+    @page {
+        size: 80mm auto;
+        margin: 0;
+    }
+}
+
+/* Touch-friendly enhancements */
+button, select, input {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Dark theme consistency */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
